@@ -9,8 +9,12 @@ const app = express();
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "https://project-chat-room-frontend.vercel.app"
-  }
+    origin: "https://project-chat-room-frontend.vercel.app",
+    methods: ["GET", "POST"],
+    transports: ['websocket', 'polling'],
+    credentials: true
+  },
+  allowEIO3: true
 });
 
 app.use(cors());
