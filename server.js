@@ -9,7 +9,7 @@ const app = express();
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: {
-    origin: "https://project-chat-room-frontend.vercel.app/"
+    origin: "https://project-chat-room-frontend.vercel.app"
   }
 });
 
